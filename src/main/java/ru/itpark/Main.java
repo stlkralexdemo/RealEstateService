@@ -1,5 +1,7 @@
 package ru.itpark;
 
+import ru.itpark.comparator.HousePriceAscComparator;
+import ru.itpark.comparator.HousePriceDescComparator;
 import ru.itpark.domain.House;
 import ru.itpark.repository.HouseRepository;
 import ru.itpark.service.HouseService;
@@ -14,6 +16,8 @@ public class Main {
         service.add(new House(4,"Vahitovskiy",1,49,3_200_000,true));
         service.add(new House(5,"Novosavinovskiy",4,85,5_600_000,false));
 
-        System.out.println(service.getAll());
+        System.out.println(service.getSorted(new HousePriceAscComparator()));
+
+        System.out.println(service.getSorted(new HousePriceDescComparator()));
     }
 }

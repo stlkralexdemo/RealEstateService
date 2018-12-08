@@ -29,19 +29,19 @@ public class HouseService {
         return result;
     }
 
-    public List<House> getByPriceRangeAsc(int min, int max){
+    public List<House> getByPriceRangeAsc(int min, int max) {
         List<House> result = repository.getByPriceRange(min, max);
         result.sort(new HousePriceAscComparator());
         return result;
     }
 
-    public List<House> getByPriceRangeDesc(int min, int max){
+    public List<House> getByPriceRangeDesc(int min, int max) {
         List<House> result = repository.getByPriceRange(min, max);
         result.sort(new HousePriceDescComparator());
         return result;
     }
 
-    public List<House> getByDistrict(List<String>districts){
+    public List<House> getByDistrict(List<String> districts) {
         return repository.getByDistrict(districts);
     }
 }

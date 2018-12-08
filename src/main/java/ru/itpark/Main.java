@@ -7,8 +7,7 @@ import ru.itpark.repository.HouseRepository;
 import ru.itpark.service.HouseService;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.SortedMap;
+
 
 public class Main {
     public static void main(String[] args) {
